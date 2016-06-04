@@ -1,2 +1,4 @@
 name: Philip Long
 markdown: kramdown
+gems:
+  - jekyll-sitemap
