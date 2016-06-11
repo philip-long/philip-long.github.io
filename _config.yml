@@ -2,9 +2,5 @@ name: Philip Long
 markdown: kramdown
 future: true
 gems:
-  - jekyll-sitemap
+    - jekyll-sitemap
   
-  
-  <h3>
-  
-  <\h3>
