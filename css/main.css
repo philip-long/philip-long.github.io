@@ -19,10 +19,24 @@ a {
 a:hover {
     text-decoration: underline;
 }
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+
+h1 { font-weight: 500;
+      font-style:normal;
+     margin: 5px 0 0;
+     font-size: 30px;
+     color:cornflowerblue;
+     padding: 0 10px 10px;
+     border-radius:2px;
+     font-family: 'merriweather', sans-serif;
 }
+h2 { color: cornflowerblue;
+     width: 150px;     
+     font-size: 20px;
+     padding-left: 20px;
+     font-weight:500;
+     font-family: 'merriweather', sans-serif;
+}
+
 p {
     font-size: 1.0em;
     line-height: 1.4em;
