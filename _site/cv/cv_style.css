@@ -1,61 +1,51 @@
-body {
-    margin: 60px auto;
-    width: 80%;
+body { margin: 0;
+       padding: 0;
+       background-color: #fff font-size: 12px;
+       font-family: "source-sans-pro", sans-serif;
+       -webkit-font-smoothing: subpixel-antialiased;
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
+* { box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
-h1 { font-weight: 600;
-      font-style:normal;
+/*
+ Primary Rules
+*/
+h1 { font-weight: 300;
+      font-style:italic;
      margin: 5px 0 0;
-     font-size: 30px;
-     color:black;
+     font-size: 40px;
+     color:#ba0018;
      padding: 0 10px 10px;
      border-radius:2px;
      font-family: 'merriweather', sans-serif;
 }
-h2 { color: black;
-     width: 150px;     
-     font-size: 20px;
+h2 { color: #ba0018;
+     width: 150px;
+     font-size: 18px;
      padding-left: 20px;
-     font-weight:600;
+     font-weight:400;
      font-family: 'merriweather', sans-serif;
 }
-
-p {
-    font-size: 1.0em;
-    line-height: 1.4em;
-    color: #333;
+h2:first-letter { font-size: 150%; }
+h3 { font-size: 18px;
+     font-weight: bold;
+     margin-bottom: 0;
+     line-height: 28px;
+     font-family: 'merriweather', sans-serif;
 }
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+h2, h3 { margin-top: 5px }
+a { color: #ba0018;
+    display: inline-block;
+    text-decoration: none;
+    padding:2px 4px;
+    border-radius:2px;
+    margin-right:-2px;
 }
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+a:hover {
+  background-color:#ba0018;
+  color:#fff;
 }
-
-ul.posts li {
-    list-style: none;
-}
-
 .key:first-child { margin-left: 0 }
 .key { margin: 0 10px;
        position: relative;
@@ -89,7 +79,9 @@ ul.posts li {
          font-family: "source-sans-pro", sans-serif;
          text-transform:uppercase;
 }
-
+ul{
+  padding-left:15px;
+}
 
 ul.skills{
   float:left;
@@ -108,7 +100,6 @@ ul.skills li:last-child{
   margin:0;
 }
 
-
 /*
  Float Rules
 */
@@ -118,10 +109,6 @@ ul.skills li:last-child{
 .row:after { clear: both }
 .col { float: left }
 .col-right { float: right }
-
-
-
-
 
 /*
  Page Rules
@@ -174,7 +161,7 @@ ul.skills li:last-child{
 
     .light { font-size: 7.5pt; line-height:12pt; color:#ddd; }
     
-    .page { width: 17cm }
+    .page { width: 21cm }
     ul {margin:5px 0 0}
     .section { padding: 5px 0 8px }
     .section-text { width: 15cm; margin: 5px 0 5px;}
