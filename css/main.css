@@ -55,3 +55,70 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+
+
+/*
+ Page Rules
+*/
+.page { width: 1000px;
+        min-height: 29.7cm;
+        margin: 1cm auto;
+
+        background: white;
+        padding: 20px 50px;
+}
+.subpage { padding: 1cm;
+           border: 1px red solid;
+           height: 297mm;
+}
+
+@page { size: A4;
+        margin: 0;
+}
+
+@media print {
+    .page { margin: 0;
+            border: initial;
+            border-radius: initial;
+            width: initial;
+            min-height: initial;
+            box-shadow: initial;
+            background: initial;
+            page-break-after: always;
+    }
+    .page-break{
+      page-break-before: always;
+      padding-top:30px;
+    }
+
+    body { font-size: 12pt;}
+    h1{
+      font-size: 23pt;
+    }
+
+    h2{
+      font-size:10pt;
+      width: 3cm;
+      padding-left: 10px;
+    }
+
+    h3 { font-size: 10pt; line-height:11pt}
+
+    .section-text { font-size: 9pt; line-height: 14pt; }
+
+    .light { font-size: 7.5pt; line-height:12pt; color:#ddd; }
+    
+    .page { width: 21cm }
+    ul {margin:5px 0 0}
+    .section { padding: 5px 0 8px }
+    .section-text { width: 15cm; margin: 5px 0 5px;}
+    .subsection { margin: 5px 0 0 }
+    .desc { font-size: 9pt }
+    
+    .contact-info { font-size: 9pt}
+    
+    ul.skills{margin: 0 10px 0 0;}
+    ul.skills li{ font-size: 9pt; margin-bottom:0}
+
+}
