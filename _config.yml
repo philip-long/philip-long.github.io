@@ -1,5 +1,6 @@
 name: Philip Long
 markdown: kramdown
+future: true
 gems:
   - jekyll-sitemap
   
