@@ -37,6 +37,11 @@ h2 { color: black;
      font-family: 'merriweather', sans-serif;
 }
 
+    h10{
+      font-size: 30pt;        
+      color: darkolivegreen;    
+    }
+
 p {
     font-size: 1.0em;
     line-height: 1.4em;
@@ -169,7 +174,7 @@ ul.skills li:last-child{
     }
 
     h3 { font-size: 10pt; line-height:11pt}
-
+    
     .section-text { font-size: 9pt; line-height: 14pt; }
 
     .light { font-size: 7.5pt; line-height:12pt; color:#ddd; }
