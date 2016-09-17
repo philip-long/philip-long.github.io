@@ -2,6 +2,11 @@ body {
     margin: 60px auto;
     width: 80%;
 }
+
+header {
+    background-color: white;
+}
+
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
@@ -19,6 +24,10 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+
+
+
 
 h1 { font-weight: 600;
       font-style:normal;
@@ -38,8 +47,9 @@ h2 { color: black;
 }
 
     h10{
-      font-size: 30pt;        
-      color: darkolivegreen;    
+      font-size: 30pt;     
+      font-family: 'Georgia', serif;    
+      color: darkblue;  
     }
 
 p {
@@ -48,7 +58,7 @@ p {
     color: #333;
 }
 footer {
-    border-top: 1px solid #d5d5d5;
+    border-top: 1px solid #a5d5df;
     font-size: .8em;
 }
 
