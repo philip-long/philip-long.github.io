@@ -1,4 +1,8 @@
 name: Philip Long
+title: Philip Long
+subtitle: PhD, Roboticist
+description: > # this means to ignore newlines until "baseurl:"
+     Website about Philip Long  
 markdown: kramdown
 future: true
 gems:
