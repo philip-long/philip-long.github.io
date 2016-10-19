@@ -3,4 +3,7 @@ markdown: kramdown
 future: true
 gems:
     - jekyll-sitemap
+    - jekyll-coffeescript
+    - jekyll-paginate
   
+google_analytics: UA-85988652-1
