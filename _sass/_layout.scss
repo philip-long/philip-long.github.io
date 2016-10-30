@@ -9,7 +9,14 @@ body {
 
 h1 {
 	font-family: Rockwell, “Courier Bold”, Courier, Georgia, Times, “Times New Roman”, serif;
-	font-size: 3.2em;
+	font-size: 2.5em;
+	text-decoration: none;
+}
+
+
+h11 {
+	font-family: Rockwell, “Courier Bold”, Courier, Georgia, Times, “Times New Roman”, serif;
+	font-size: 1.4em;
 	text-decoration: none;
 }
 
@@ -35,7 +42,9 @@ h3 {
 	line-height: 1.5;
 }
 
-
+p{
+	text-align: justify;
+}
 
 h2 {
 	font-size: 2em;
@@ -79,12 +88,12 @@ a:hover {
 header {
 	background: $header;
 	background-repeat: no-repeat;
-	@include gradient($heading-font-color,#64a70b, vertical);
+        @include gradient($heading-font-color,#1d2126,vertical);
 	padding: 0px 15px;
 	text-align: center;
 	text-shadow: 3px 3px 3px #000;
 	margin: 50px 0 0;
-	height: 50vh;
+	height: 20vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
