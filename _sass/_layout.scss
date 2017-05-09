@@ -27,7 +27,7 @@ header_rule:visited {
 	font-weight: bold;
 }
 header_rule:hover {
-	color: red;
+	color: $link-hover-color;
 	text-decoration: underline;
 }
 
