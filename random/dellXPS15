@@ -1,0 +1,22 @@
+---
+layout: default
+title: Philip Long, PhD, Roboticist
+---
+
+
+<h3> 1. Installation</h3>
+  
+   <li> I installed ubuntu 14.04 alongside windows 10 using a bootable live USB</li>
+   <li>Disable fast booting and hibernate in windows 10( we also need to do this to shrink the volume to create free space for the install)</li>
+   <li>Disable secure boot</li>
+   <li>Choose to boot from USB using UEFI i.e. not legacy mode</li>
+   <li>Once ubuntu has booted it it should recognize the other operating systems present, if it doesn't there is something wrong</li>
+   <li>Afterwards it should be OK to install in the normal fashion.  </li>
+<br>  
+
+<h3> 2. Graphics card </h3>
+    <li> Using NVIDIA 381.22 did not work for me, bascially no gui was loaded at all</li>
+    <li> The previous version of NVIDIA (378 ?) worked well except when I connected via HDMI to an external monitor, then I had very poor graphics and lots of freezing. I think the issue is that NVIDIA controls the external screen whereas INTEL run the built in display. Apparently this is physically wired but there is a config file to edit as a work around. </li>   
+    <li> Currently I'm using the X.Org driver that 's working great including with the external screen</li>
+
+<h3> 3. Ethernet & Wifi </h3>
