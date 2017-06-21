@@ -6,16 +6,20 @@ title: Philip Long, PhD, Roboticist
 
 <h3> 1. Qtcreator</h3>
   <p>
-  Qtcreator is a great IDE especially for C++ and ROS. I find it easier to manage than eclispe and better than Kdevelop. To get it up and running: 
+  Qtcreator is a great IDE especially for C++ and ROS. I find it easier to manage than eclipse and better than Kdevelop. To get it up and running: 
   </p>
-   <li> First don't forget to open Qtcreator from a sourced terminal and select the uppermost CMakeLists.txt as the project (not CamkeLists associated with each package). Then select the correct build folder from the browse option. This should let you compile directly in qt</li>
-   <li>catkin_init_workspace creates a CMakeLists.txt which is actually a symbolic link towards pointing towards the toplevel cmake. For Qtcreator to work this needs to be replaced</li>
-   <b> rm CMakeLists.txt ; cp /opt/ros/indigo/share/catkin/cmake/toplevel.cmake ./CMakeLists.txt </b>
- <p>    
-If the repository uses catkin build instead of catkin make things aren't so easy as there is no toplevel CMakeLists.txt file. A workaround  
+   <li> First don't forget to open Qtcreator from a sourced terminal and select the uppermost CMakeLists.txt as the project (not the CMakeLists.txt associated with each package). Then select the correct build folder from the browse option. This should let you compile directly in Qtcreator</li>
+   <li> catkin_init_workspace creates a CMakeLists.txt which is actually a symbolic link towards pointing towards the toplevel cmake. For Qtcreator to work this needs to be replaced, with the following command</li>
+   <i> rm CMakeLists.txt ; cp /opt/ros/indigo/share/catkin/cmake/toplevel.cmake ./CMakeLists.txt </i>
+
+   <br>     
+
+<p>      
+If the repository uses catkin build instead of catkin_make things aren't so easy as there is no toplevel CMakeLists.txt file. A workaround  
 </p>
-<li> The CMakelists.txt file in the package must be selected as project <b> catkin_ws/src/packageA/CMakeLists.txt </b></li>
-<li> The build folder must be selected as the catkin build folder  <b> catkin_ws/build/packageA/</b> </li>
-<li> You should be able to compile using qt at this stage. It should be noted that everytime you add anew file catkin build must be executed</li>
+
+<li> The CMakelists.txt file in the package must be selected as project, e.g. <b> catkin_ws/src/packageA/CMakeLists.txt </b></li>
+<li> The build folder must be selected as the catkin build folder  e.g. <b> catkin_ws/build/packageA/</b> </li>
+<li> You should be able to compile using qt at this stage. It should be noted that every time you add a new file catkin build must be executed</li>
 <br>  
 
