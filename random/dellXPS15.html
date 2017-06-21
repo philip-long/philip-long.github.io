@@ -3,6 +3,10 @@ layout: default
 title: Philip Long, PhD, Roboticist
 ---
 
+<p>
+  Here are some things that worked for me but try them at your own risk
+</p>
+
 
 <h3> 1. Installation</h3>
   
@@ -23,3 +27,4 @@ title: Philip Long, PhD, Roboticist
 <li> Wifi card is <b>Qualcomm Atheros QCA6174 802.11ac Wireless Network Adapter</b>, I had absolutely no luck in getting this to work. Eventually I bought a Panda 300Mbps Wireless N USB Adapter.</li>
    <li> Laptop doesn't have a dedicated Ethernet port, I am using USB Network Adapter, <b>Rankie SuperSpeed USB 3.0 to RJ45 Gigabit Ethernet Network Adapter - R1161</b>,   </li>   
    <li> However my etherent connection was unbearably slow even causing the computer to freeze up every so often. For example any sudo command took about 30 seconds to be executed, opening a folder in nautilus also caused an unresponsive screen. The process <b>,wpa_supplicant</b>, was using as much as 90% of the CPU. I tried a lot of things to resolve this inculding fiddling with my interent settings and disabling IPvS 6 but no luck. Eventually I completely purged (sudo apt-get purge network-manager) network manager and installed wicd (do this first) which resolved the issue.</li>
+
