@@ -1,0 +1,15 @@
+---
+layout: default
+title: Philip Long, PhD, Roboticist
+---
+
+
+<h3> 1. Qtcreator</h3>
+  <p>
+  Qtcreator is a great IDE especially for C++ and ROS. 
+  </p>
+   <li> First don't forget to open Qtcreator from a sourced terminal and select the uppermost CMakeLists.txt as the project (not CamkeLists associated with each package)</li>
+   <li>catkin_init_workspace creates a CMakeLists.txt which is actually a symbolic link towards pointing towards the toplevel cmake. For Qtcreator to work this needs to be replaced</li>
+   rm CMakeLists.txt ; cp /opt/ros/indigo/share/catkin/cmake/toplevel.cmake ./CMakeLists.txt
+<br>  
+
