@@ -1,1 +1,37 @@
 
+---
+layout: default
+title: Philip Long, PhD, Roboticist
+---
+
+
+<li> Compiz can be restarted using. This usually stops disappearing window bars </li> 
+
+<code>
+compiz --replace
+</code>
+
+<li>  Remote copying 
+<code>
+scp -r username@ip:/path/to/folder/on/remote/pc /path/to/folder/on/local/pc
+</code>
+  
+<li>  Scan network for device </li> 
+
+  <code>
+sudo arp-scan --interface=eth0 --localnet
+</code>
+
+<li> Start jekyll server for off-line website tests </li> 
+<code>
+    jekyll --server
+</code>
+
+<li> Search and replace all in all files in tree :</li>  
+<code>
+find ./ -type f -exec sed -i -e 's/old_name/new_name/g' {} ;
+</code>
+<li> Search and replace all filenames in tree : </li>  
+<code>
+find ./ -iname "laser_manager*" | rename -v "s/laser_manager/laser_sensor_set/g"
+  </code>
