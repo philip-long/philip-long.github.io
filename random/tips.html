@@ -29,7 +29,7 @@ sudo arp-scan --interface=eth0 --localnet
 
 <li> Search and replace word in all files in tree :</li>  
 <code>
-find ./ -type f -exec sed -i -e 's/old_name/new_name/g' {} ;
+find ./ -type f -exec sed -i -e 's/old_name/new_name/g' {} \;
 </code>
 <li> Search and replace all filenames in tree : </li>  
 <code>
