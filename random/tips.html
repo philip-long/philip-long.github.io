@@ -5,12 +5,24 @@ title: Philip Long, PhD, Roboticist
 <br>
 <br>
 
-<li> Compiz can be restarted using. This usually stops disappearing window bars </li> 
-
+<h3> 1. File manipulation</h3>
+<li> Recursive find</li>  
 <code>
-compiz --replace
+grep -r "search term" ./
+  ps -A | grep "process"
 </code>
 
+<li> Search and replace word in all files in tree :</li>  
+<code>
+find ./ -type f -exec sed -i -e 's/old_name/new_name/g' {} \;
+</code>
+<li> Search and replace all filenames in tree : </li>  
+<code>
+find ./ -iname "laser_manager*" | rename -v "s/laser_manager/laser_sensor_set/g"
+  </code>
+
+
+<h3> Network Stuff </h3>
 <li>  Remote copying 
 <code>
 scp -r username@ip:/path/to/folder/on/remote/pc /path/to/folder/on/local/pc
@@ -27,11 +39,10 @@ sudo arp-scan --interface=eth0 --localnet
     jekyll --server
 </code>
 
-<li> Search and replace word in all files in tree :</li>  
+
+<h3> Ubuntun </h3>
+<li> Compiz can be restarted using. This usually stops disappearing window bars </li> 
+
 <code>
-find ./ -type f -exec sed -i -e 's/old_name/new_name/g' {} \;
+compiz --replace
 </code>
-<li> Search and replace all filenames in tree : </li>  
-<code>
-find ./ -iname "laser_manager*" | rename -v "s/laser_manager/laser_sensor_set/g"
-  </code>
