@@ -59,3 +59,15 @@ sudo arp-scan --interface=eth0 --localnet
 <code>
 compiz --replace
 </code>
+
+<h3> 3. Stl </h3>
+<li> Appending vectors to other vectors </li> 
+<code>
+std::vector<T> a,b;
+a.insert(a.end(), b.begin(), b.end());
+</code>
+	<li> Multipling each element by an external scalar by using a lambda function</li>	
+<code>
+	double scalar;
+ std::for_each(a.begin(),b.end(), [scalar](double& n){n*=scalar;});
+</code>
