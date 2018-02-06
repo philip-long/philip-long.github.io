@@ -20,8 +20,10 @@ find ./ -type f -exec sed -i -e 's/old_name/new_name/g' {} \;
 <code>
 find ./ -iname "laser_manager*" | rename -v "s/laser_manager/laser_sensor_set/g"
   </code>
-
-
+<li> Remove all tilde files in directory tree </li> 
+<code>
+find .  -name "*~" -exec rm {} \;
+</code>
 <h3> 2. Network Stuff </h3>
 <li>  Remote copying 
 <code>
