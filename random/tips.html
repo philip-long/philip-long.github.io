@@ -25,14 +25,14 @@ find ./ -iname "laser_manager*" | rename -v "s/laser_manager/laser_sensor_set/g"
 find .  -name "*~" -exec rm {} \;
 </code>
   
-<li> Automate testing with bash, & - runs process in background/in parallel then wait waits for all process to finish before incrementing loop </li> 
+<li> Automate testing with bash, & - runs process in background/in parallel then wait - waits for all process to finish before incrementing loop </li> 
 <code>
-  for value in {1..5}
+  for value in {1..5} \n
 	do
 	roslaunch package1 monitor.launch config:=config1 &
 	rosrun  package2  oackage_node test:=$value &
 	wait
-done
+done \n
   </code>
   
 <h3> 2. Network Stuff </h3>
@@ -64,10 +64,14 @@ compiz --replace
 <li> Appending vectors to other vectors </li> 
 <code>
 std::vector<T> a,b;
+	
 a.insert(a.end(), b.begin(), b.end());
+	
 </code>
 	<li> Multipling each element by an external scalar by using a lambda function</li>	
 <code>
 	double scalar;
+	
  std::for_each(a.begin(),b.end(), [scalar](double& n){n*=scalar;});
+	
 </code>
