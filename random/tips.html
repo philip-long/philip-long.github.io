@@ -30,7 +30,7 @@ find .  -name "*~" -exec rm {} \;
   for value in {1..5} \n
 	do
 	roslaunch package1 monitor.launch config:=config1 &
-	rosrun  package2  oackage_node test:=$value &
+	rosrun  package2  package_node test:=$value &
 	wait
 done \n
   </code>
