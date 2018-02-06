@@ -26,14 +26,14 @@ find .  -name "*~" -exec rm {} \;
 </code>
   
 <li> Automate testing with bash, & - runs process in background/in parallel then wait - waits for all process to finish before incrementing loop </li> 
-<code>
-  for value in {1..5} \n
+<pre>
+  for value in {1..5}
 	do
 	roslaunch package1 monitor.launch config:=config1 &
 	rosrun  package2  package_node test:=$value &
 	wait
-done \n
-  </code>
+done
+  </pre>
   
 <h3> 2. Network Stuff </h3>
 <li>  Remote copying 
