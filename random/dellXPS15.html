@@ -19,7 +19,7 @@ title: Philip Long, PhD, Roboticist
    <li>I then tried to install ubuntu 16.04 alongside both ubuntu 14.04 and windows 10, I shrank the volume in windows 10, then created a live usb, during the boot F12 enters the menu and you need to select boot from USB under the UEFI menu</li>
    <li>However, this just stayed on the splash screen with no error messages, the problem is the nvidia drivers. This can be resolved by adding nomodeset, during the boot menu press 'e' while try ubunut is selected. Then add 'nomodeset' to the linux line just before '---' and after splash. Something similiar is presented <a href="https://askubuntu.com/questions/162075/my-computer-boots-to-a-black-screen-what-options-do-i-have-to-fix-it"> here </a> </li>   
    <li>Finally, Ubuntu won't shut down correctly just froze. After trawling through stack the following worked ( I can't find the original link) </li> 
-      ```
+     ```
      sudo nano /etc/default/grub 
      GRUB_CMDLINE_LINUX_DEFAULT="quite splash acpi_rev_override=1"
      sudo update-grub
