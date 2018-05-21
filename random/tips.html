@@ -83,19 +83,19 @@ a.insert(a.end(), b.begin(), b.end());
 	
 	<code>
 		
-	enum ACTION { LIFT_LEFT_HAND, LOOK_AROUND, LIFT_RIGHT_HAND, GRASP, RELEASE, TURN_OFF_LED,TURN_ON_LED} ;
-	switch my_action
-		{
-		case LIFT_LEFT_HAND:
-		liftLeftHand();	
-		break;
-		case LOOK_AROUND:
-		lookAround();
-		break;
-		case LIFT_LEFT_HAND_LOOK_AROUND:
-		liftLeftHand();	
-		lookAround();
-		}
+	enum ACTION { LIFT_LEFT_HAND, LOOK_AROUND, LIFT_RIGHT_HAND, GRASP, RELEASE, TURN_OFF_LED,TURN_ON_LED} ; <br />
+	switch my_action  <br />
+		{ <br />
+		case LIFT_LEFT_HAND:<br />
+		liftLeftHand();	<br />
+		break;<br />
+		case LOOK_AROUND:<br />
+		lookAround();<br />
+		break;<br />
+		case LIFT_LEFT_HAND_LOOK_AROUND:<br />
+		liftLeftHand();	<br />
+		lookAround();<br />
+		}<br />
 	</code>	
 	
 	<li> This type of structure means all actions can be stored in one function. The problem is it tends to balloon when composite
@@ -103,11 +103,12 @@ a.insert(a.end(), b.begin(), b.end());
 		what I think is a nice solution is using primes for enums. In doing we can combine as many actions as desired. </li>
 		<code>
 		
-	enum ACTION { LIFT_LEFT_HAND=2, LOOK_AROUND=3, LIFT_RIGHT_HAND=5, GRASP=7, RELEASE=11, TURN_OFF_LED=13,TURN_ON_LED=17} ;
-	if (my_action%LIFT_LEFT_HAND==0)
-		liftLeftHand();	
-	if (my_action%LOOK_AROUND==0)
-		lookAround();
+	enum ACTION { LIFT_LEFT_HAND=2, LOOK_AROUND=3, LIFT_RIGHT_HAND=5, GRASP=7, RELEASE=11, TURN_OFF_LED=13,TURN_ON_LED=17} ;			<br />
+	<br />			
+	if (my_action%LIFT_LEFT_HAND==0)<br />
+		liftLeftHand();	<br />
+	if (my_action%LOOK_AROUND==0)<br />
+		lookAround();<br />
 
  </code>	
 	
