@@ -75,3 +75,42 @@ a.insert(a.end(), b.begin(), b.end());
  std::for_each(a.begin(),b.end(), [scalar](double& n){n*=scalar;});
 	
 </code>
+	
+<h3> 3. Using prime numbers for state machines</h3>	
+
+	<li> Often I have to create state machines for simple robot actions. 
+		Typically these are high level commands passed by an enum. For instance: </li> 
+	
+	<code>
+		
+	enum ACTION { LIFT_LEFT_HAND, LOOK_AROUND, LIFT_RIGHT_HAND, GRASP, RELEASE, TURN_OFF_LED,TURN_ON_LED} ;
+	switch my_action
+		{
+		case LIFT_LEFT_HAND:
+		liftLeftHand();	
+		break;
+		case LOOK_AROUND:
+		lookAround();
+		break;
+		case LIFT_LEFT_HAND_LOOK_AROUND:
+		liftLeftHand();	
+		lookAround();
+		}
+	</code>	
+	
+	<li> This type of structure means all actions can be stored in one function. The problem is it tends to balloon when composite
+		actions are possible, for example, TURN_ON_CAMERAS and LEDS and LOOK_AROUND. Instead of creating an case for each composite action
+		what I think is a nice solution is using primes for enums. In doing we can combine as many actions as desired. </li>
+		<code>
+		
+	enum ACTION { LIFT_LEFT_HAND=2, LOOK_AROUND=3, LIFT_RIGHT_HAND=5, GRASP=7, RELEASE=11, TURN_OFF_LED=13,TURN_ON_LED=17} ;
+	if (my_action%LIFT_LEFT_HAND==0)
+		liftLeftHand();	
+	if (my_action%LOOK_AROUND==0)
+		lookAround();
+
+ </code>	
+	
+	
+	
+	
