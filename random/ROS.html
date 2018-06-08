@@ -23,3 +23,13 @@ If the repository uses catkin build instead of catkin_make things aren't so easy
 <li> You should be able to compile using qt at this stage. It should be noted that every time you add a new file catkin build must be executed</li>
 <br>  
 
+<h3> Sourcing multiple workspaces</h3>
+<p>      
+For reasons beyond me occasionally, one source overrides another. To ensure this does not happen the extend needs to be
+  appended to the sourcing in the bashrc
+</p>
+
+<code>
+  source /opt/ros/indigo/setup.bash 
+  source ~/catkin_ws_n/devel/setup.sh --extend
+<code>
