@@ -42,6 +42,18 @@ Before this I worked as a  researcher in the robotics team at  <a href="http://w
         
    assd
    
+site.posts : {{ site.posts }}
+My posts:
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
+    
+    
 <br>
 <br>  
 </div><!-- /.blurb -->
