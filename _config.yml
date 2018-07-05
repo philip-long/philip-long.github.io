@@ -9,5 +9,6 @@ gems:
     - jekyll-sitemap
     - jekyll-coffeescript
     - jekyll-paginate
+    - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   
 google_analytics: UA-85988652-1
