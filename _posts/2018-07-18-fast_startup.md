@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Ironic Fast startup option
-date:   2018-07-09 
+date:   2018-07-18 
 category: [ Linux, Windows,dual-boot]
 ---
 
