@@ -11,8 +11,8 @@ category: [ Linux, Windows,dual-boot]
 It was my tri-annual boot day today, it goes something like this
 </p>
 
-<li> Boot up in windows 10, (a) fill in a word/excel document (b) do some solid works modeling</li>
-<li> When finished click update and restart</li>
+<li> Boot up in windows 10, to (a) fill in a word/excel document (b) do some solid works modeling</li>
+<li> There's inevitably a backlog of updates, when finished click update and restart</li>
 <li> Promptly forget about update and continue life on linux parition</li>
 <li> Someone sends me an urgent excel sheet or word templated document</li>
 <li> Said doc looks wierd in libre office </li>
