@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ironic Fast startup option
+title: Windows 10 Fast startup option
 date:   2018-07-18 
 category: [ Linux, Windows,dual-boot]
 ---
