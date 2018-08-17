@@ -1,7 +1,7 @@
 ---
 layout: default
 title: PCL/Boost Segmentation Fault 
-date:   2018-08-17
+date:  2018-08-17
 category: [ Linux, C++, PCL,Boost]
 ---
 
