@@ -21,9 +21,9 @@ I was recently trying to use PCL's convex hull functions and even though I had s
 <li>The CXX compiler identification is GNU 4.8.4</li>
 
 
-<h3> 2. Problemn</h3>
+<h3> 2. Problem</h3>
 <p>
-Running my ros node with as follows
+Running my ros node as follows
 </p>
 
 <code>
