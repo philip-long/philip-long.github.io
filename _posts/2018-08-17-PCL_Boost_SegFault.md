@@ -1,24 +1,40 @@
 ---
 layout: default
-title: Segmentation Fault 
+title: PCL/Boost Segmentation Fault 
 date:   2018-08-17
 category: [ Linux, C++, PCL,Boost]
 ---
 
+<p>
+I was recently trying to use PCL's convex hull functions and even though I had successfully ran it before this time it didn't work. The thing is, it compiles successfully but seg faults immediately on startup. As I was editing a large library, I didn't know what was going on. Anyway it turns out, this is a well know issue with PCL documented 
+<a href="https://github.com/ros-industrial-consortium/CAD-to-ROS/pull/96">here </a>,
+<a href="https://github.com/PointCloudLibrary/pcl/issues/780"> here </a>, 
+<a href="https://github.com/felixendres/rgbdslam_v2/issues/8"> here </a>,
+<a href="https://github.com/PointCloudLibrary/pcl/issues/619"> here </a>, and
+<a href="https://stackoverflow.com/questions/39292457/c-segmentation-fault-in-empty-main-in-a-non-empty-project"> here </a>. The accepted solution seems to be either don't use C++11 or recompile PCL with C++11. It seems the issue comes from different compiler versions in the boost libraries. I eventually got round the problem by adding a a few tags in the CMakelists file (I think one of the git issues said as much).
+</p>
+
+<h3> 1. My System information</h3>
+<li>Ubuntu 14.04 </li>
+<li>Boost version: 1.54.0</li>
+<li>PCL 1.7</li>
+<li>The CXX compiler identification is GNU 4.8.4</li>
 
 
-Ubuntu 14.04
--- Boost version: 1.54.0
--- PCL 1.7
-The CXX compiler identification is GNU 4.8.4
-
+<h3> 2. Problemn</h3>
+<p>
+Running my ros node with as follows
+</p>
 
 <code>
 rosrun --prefix 'gdb --args' <package_name> <node_name> 
 </code>
+  
+ <p>
+ yielded
+</p>
 
-incompatibility between boost and PCL
-
+```
 Program received signal SIGSEGV, Segmentation fault.
 0x00007ffff3453ae0 in boost::math::lanczos::lanczos_initializer<boost::math::lanczos::lanczos17m64, long double>::init::init() () from /usr/lib/libpcl_sample_consensus.so.1.7
 
@@ -35,26 +51,28 @@ Program received signal SIGSEGV, Segmentation fault.
 #6  0x0000000000000001 in ?? ()
 #7  0x00007fffffffd380 in ?? ()
 #8  0x0000000000000000 in ?? ()
+```
 
-This is a know issue
-
-<a href="https://github.com/ros-industrial-consortium/CAD-to-ROS/pull/96">here </a> 
-<a href="https://github.com/PointCloudLibrary/pcl/issues/780"> here </a> 
-<a href="https://github.com/felixendres/rgbdslam_v2/issues/8"> here </a> 
-<a href="https://github.com/PointCloudLibrary/pcl/issues/619"> here </a> 
-<a href="https://stackoverflow.com/questions/39292457/c-segmentation-fault-in-empty-main-in-a-non-empty-project"> here </a> </li> 
+<h3> 3. Work-around</h3>
+ <p>
+To resolve the issue the following tags were put in the CMakelists
+</p>
 
 
-
-Add this in CMakelists
-
-<code>
+```
+  
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+  
   message(STATUS "Setting build type to 'Release' as none was specified.")
+  
   set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build." FORCE)
-  # Set the possible values of build type for cmake-gui
-  set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release"
+  
+  set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" 
     "MinSizeRel" "RelWithDebInfo")
+   
 endif()
+```
 
-</code>
+ <p>
+  And voilà! 4 hours of my life I'm never getting back. 
+  </p>
