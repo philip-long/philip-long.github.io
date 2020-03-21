@@ -50,5 +50,14 @@ category: [ ubuntu, dell, windows10,bitlocker]
 I followed this [link](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/) for the partitioning, except,
 <li> All partitions were set to logical</li>
 <li> Swap size set to 3GB</li>
- 
+
+# After installation 
+  <li> So when you boot into back into windows, it will ask you for the bitlocker key </li>
+  <li> Enter it and all will be well</li>
+  
+ # What happens when all is not well
+ <p>
+    We've dual booted two lenovas and one dell latitude and after entering the bitlocker key onec after installation you'll never need to enter it again. However, we carried out the exact same steps with 2 dell xps models and each boot into windows requries the bitlocker key to be entered once again. 
+    </p>
+ <li> 
 
