@@ -1,0 +1,54 @@
+---
+layout: default
+title: Dual booting windows 10 and ubuntu 18.04 Dell Latitude
+date:   2020-03-20 
+category: [ ubuntu, dell, windows10,bitlocker]
+---
+
+
+    
+<p>
+    As far as I can tell this laptop is readily compatible with ubuntu 16LTS but installing ubunutu 14.04 on the dell xps 15 and getting in to function correctly takes time. Having said that, <del>I really like this laptop</del> I'm really <i> trying </i> to like this laptop because its powerful, light and a battery life well over 6 hours. Anecdotally other people have also complained to me about the dell xps mainly about hardware issues. 
+</p>
+
+     
+     
+## Partitioning windows
+    <li> Save or print out your bitlocker key, you will probably need to enter this at least once</li>
+   ```
+   Manage bitlocker
+   Backup your recovery key   
+   ```
+   <li> In Contol panel, search disk and go to “create and format hard disk partitions"< /li>
+   <li> This will be under Administrative tool </li>
+   <li> Right click the drive you want to shrink, and press shrink volume</li>
+   <li> Assign at least 20gb to the free space but anything upward depending on your usage.</li>
+
+# Disable Secure boot
+
+ <li> Disable secure boot  </li>
+ <li> Go to advanced start up in pc settings and click restart now </li>
+ <li> Access UEFI settings </li>
+ <li>  Click trouble shoot options </li>
+ <li> Click advanced options </li>
+ <li> UEFI Firmware Settings </li>
+ <li>  Click restart. </li>
+ <li> Move to boot tab in bios </li>
+ <li> Disable secure boot and confirm setting. </li>
+     
+     
+## Switching from RAID to AHCI
+```
+1. Run MSCONFIG
+2. Enable Safe Boot (minimal)
+3. Reboot into UEFI/BIOS and change to AHCI
+4. Boot up into safe mode
+5. Run MSCONFIG and disable Safe Boot.
+6. Reboot
+    ```
+# installing Ubuntu
+I followed this [link](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/) for the partitioning, except,
+<li> All partitions were set to logical</li>
+<li> Swap size set to 3GB</li>
+ 
+
