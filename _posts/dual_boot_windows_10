@@ -11,37 +11,30 @@ category: [ ubuntu, dell, windows10,bitlocker]
     As far as I can tell this laptop is readily compatible with ubuntu 16LTS but installing ubunutu 14.04 on the dell xps 15 and getting in to function correctly takes time. Having said that, <del>I really like this laptop</del> I'm really <i> trying </i> to like this laptop because its powerful, light and a battery life well over 6 hours. Anecdotally other people have also complained to me about the dell xps mainly about hardware issues. 
 </p>
 
-
-<h3> 1. Dual Booting</h3>
-   <li> Save or print out your bitlocker key</li>
+     
+     
+## Partitioning windows
+    <li> Save or print out your bitlocker key, you will probably need to enter this at least once</li>
    ```
    Manage bitlocker
    Backup your recovery key   
    ```
-   
-  <li> In Contol panel, search disk and go to “create and format hard disk partitions< /li>
-<li> The will be under Administrative tool </li>
-<li> Right click the drive you want to shrink, and press shrink volume</li>
-<li>  This will be drive C</li>
-<li> Assign at least 20gb to the free space but anything upward depending on your usage.</li>
+   <li> In Contol panel, search disk and go to “create and format hard disk partitions"< /li>
+   <li> This will be under Administrative tool </li>
+   <li> Right click the drive you want to shrink, and press shrink volume</li>
+   <li> Assign at least 20gb to the free space but anything upward depending on your usage.</li>
 
+# Disable Secure boot
 
-   <li>I installed ubuntu 14.04 alongside windows 10 using a bootable live USB</li>
-   <li>Firstly we need to disable fast booting and hibernate in windows 10 (we also need to do this to shrink the volume to create free space for the install)</li>
-   <li>Disable secure boot from the BIOS</li>
-   <li>Choose to boot from USB using UEFI i.e. not legacy mode, again in the BIOS options</li>
-   <li>Once ubuntu has booted it it should recognize the other operating systems present, if it doesn't there is something wrong, probably you're booting in legacy mode</li>
-   <li>Afterwards it should be OK to install in the normal fashion.</li>
-   <li>I then tried to install ubuntu 16.04 alongside both ubuntu 14.04 and windows 10, I shrank the volume in windows 10, then created a live usb, during the boot F12 enters the menu and you need to select boot from USB under the UEFI menu</li>
-   <li>However, this just stayed on the splash screen with no error messages, the problem is the nvidia drivers. This can be resolved by adding nomodeset, during the boot menu press 'e' while try ubunut is selected. Then add 'nomodeset' to the linux line just before '---' and after splash. Something similiar is presented <a href="https://askubuntu.com/questions/162075/my-computer-boots-to-a-black-screen-what-options-do-i-have-to-fix-it"> here </a> </li>   
-   <li>Finally, Ubuntu won't shut down correctly just froze. After trawling through stack the following worked ( I can't find the original link) </li> 
-     ```
-     sudo nano /etc/default/grub 
-     GRUB_CMDLINE_LINUX_DEFAULT="quite splash acpi_rev_override=1"
-     sudo update-grub
-     ```
-     
-     
+ <li> Disable secure boot  </li>
+ <li> Go to advanced start up in pc settings and click restart now </li>
+ <li> Access UEFI settings </li>
+ <li>  Click trouble shoot options </li>
+ <li> Click advanced options </li>
+ <li> UEFI Firmware Settings </li>
+ <li>  Click restart. </li>
+ <li> Move to boot tab in bios </li>
+ <li> Disable secure boot and confirm setting. </li>
      
      
 ## Switching from RAID to AHCI
