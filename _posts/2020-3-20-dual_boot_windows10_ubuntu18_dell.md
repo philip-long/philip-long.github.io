@@ -7,21 +7,19 @@ category: [ ubuntu, dell, windows10,bitlocker]
 
 
 
-   <p>
-    Steps to install ubuntu alongside windows 10. Dual booting seems to be becoming more and more difficult. It goes without saying, you should backup everything before trying this because things can go wrong (very wrong)!  
-    </p>
+   <p> 
+       Steps to install ubuntu alongside windows 10. Dual booting seems to be becoming more and more difficult. It goes without saying, you should backup everything before trying this because things can go wrong (very wrong)!  
+  </p> 
      
-     <br>     
+    
      
 <h3> Partitioning windows </h3>
 
-   <p> If you have bitlocker you need to save or print out your bitlocker key, this is very important, you will probably need to enter this at least once  </p>
+   <p> If you have bitlocker you need to save or print out your bitlocker key, this is very important, you will probably need to enter this at least once</p>
    
-    <li>. Manage bitlocker </li>
-   
-    <li> Backup your recovery key </li>  
-   
-    <li> Print the recovery key , Save to a USB flash drive </li>
+   <li> Manage bitlocker </li>
+<li> Backup your recovery key</li>
+<li>  Print the recovery key , Save to a USB flash drive</li>
  
  <br>     
  
@@ -42,8 +40,7 @@ category: [ ubuntu, dell, windows10,bitlocker]
  <li> Click restart. </li>
  <li> Move to boot tab in bios </li>
  <li> Disable secure boot and confirm setting ( you may be asked for bitlocker key) </li>
-    
-    <br>     
+
     
 <h3> Switching from RAID to AHCI </h3>
  <li> Run MSCONFIG </li>
