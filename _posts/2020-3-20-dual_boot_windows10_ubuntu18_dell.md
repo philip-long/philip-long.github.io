@@ -57,7 +57,8 @@ category: [ ubuntu, dell, windows10,bitlocker]
 
 <h3> Installing Ubuntu </h3>
 
-   <p> I followed this [link](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/) for the partitioning, except,</p>
+   <p> I followed this 
+<a href="https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/">link</a>  for the partitioning, except,</p>
    
 <li> All partitions were set to logical rather than primary</li>
 <li> Swap size set to 3GB</li>
