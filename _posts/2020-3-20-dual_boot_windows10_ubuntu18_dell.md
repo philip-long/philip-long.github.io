@@ -37,7 +37,7 @@ category: [ ubuntu, dell, windows10,bitlocker]
 
  <li> Go to advanced start up in windows settings and click restart now </li>
  <li> Access UEFI settings </li>
- <li> Click trouble shoot options </li>
+ <li> Click troubleshoot options </li>
  <li> Click advanced options </li>
  <li> UEFI Firmware Settings </li>
  <li> Click restart. </li>
@@ -48,7 +48,7 @@ category: [ ubuntu, dell, windows10,bitlocker]
 <h3> Switching from RAID to AHCI </h3>
  <li> Run MSCONFIG </li>
  <li>  Enable Safe Boot (minimal) </li>
- <li>  Reboot into UEFI/BIOS and change to AHCI </li>
+ <li>  Reboot into UEFI/BIOS (F1 of F2) and change to AHCI </li>
  <li>  Boot up into safe mode </li>
  <li>  Run MSCONFIG and disable Safe Boot. </li>
  <li>  Reboot </li>
