@@ -13,13 +13,18 @@ category: [ ubuntu, dell, windows10,bitlocker]
      
 <h3> Partitioning windows </h3>
     <li> Save or print out your bitlocker key, this is very important, you will probably need to enter this at least once</li>
-   1. Manage bitlocker
-   2. Backup your recovery key   
-   2. Print the recovery key , Save to a USB flash drive
    
-   <li> In Control panel, search disk and go to “create and format hard disk partitions"< /li>
-   <li> Right click the drive you want to shrink, and press shrink volume</li>
-   <li> Assign at least 40gb to the free space.</li>
+   1. Manage bitlocker
+   
+   2. Backup your recovery key   
+   
+   3. Print the recovery key , Save to a USB flash drive
+   
+   4.  In Control panel, search disk and go to “create and format hard disk partitions"
+   
+   5. Right click the drive you want to shrink, and press shrink volume
+   
+   6. Assign at least 40gb to the free space.
 
 # Disable Secure boot
 
