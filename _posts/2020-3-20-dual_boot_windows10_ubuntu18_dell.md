@@ -12,7 +12,8 @@ category: [ ubuntu, dell, windows10,bitlocker]
     </p>
      
 <h3> Partitioning windows </h3>
-    <li> Save or print out your bitlocker key, this is very important, you will probably need to enter this at least once</li>
+
+    <li> Save or print out your bitlocker key, this is very important, you will probably need to enter this at least once </li>
    
    1. Manage bitlocker
    
@@ -26,9 +27,8 @@ category: [ ubuntu, dell, windows10,bitlocker]
    
    6. Assign at least 40gb to the free space.
 
-# Disable Secure boot
+<h3> Disable Secure boot </h3>
 
- <li> Disable secure boot  </li>
  <li> Go to advanced start up in windows settings and click restart now </li>
  <li> Access UEFI settings </li>
  <li> Click trouble shoot options </li>
@@ -39,7 +39,7 @@ category: [ ubuntu, dell, windows10,bitlocker]
  <li> Disable secure boot and confirm setting, you may be asked for bitlocker key </li>
      
     
-## Switching from RAID to AHCI
+<h3> Switching from RAID to AHCI </h3>
  <li> Run MSCONFIG </li>
  <li>  Enable Safe Boot (minimal) </li>
  <li>  Reboot into UEFI/BIOS and change to AHCI </li>
@@ -48,18 +48,19 @@ category: [ ubuntu, dell, windows10,bitlocker]
  <li>  Reboot </li>
 
 
-# Installing Ubuntu
+<h3> Installing Ubuntu </h3>
 I followed this [link](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/) for the partitioning, except,
 <li> All partitions were set to logical rather than primary</li>
 <li> Swap size set to 3GB</li>
 
-# After installation 
+<h3> After installation </h3>
   <li> So when you boot into back into windows, it will ask you for the bitlocker key </li>
   <li> Enter it and all will be well</li>
   
- # What happens when all is not well
- <p>
+ <h3> What happens when all is not well </h3>
+
+<p>
  In total, with the exact same windows 10 installation, we've tried this 5 times.  We've dual booted two lenovas and one dell latitude and after entering the bitlocker key once after installation you'll never need to enter it again. However, we carried out the exact same steps with 2 dell xps models and each boot into windows requries the bitlocker key to be entered once again. This is not practical, but we're required to keep bitlocker enabled. The least worst solution we've found is using a usb key with the bitlocker key saved to it. This means that at each startup user requries the usb to be in the laptop. Awkward but less awkward than a 48 digit key...
     </p>
- <li> 
+
 
