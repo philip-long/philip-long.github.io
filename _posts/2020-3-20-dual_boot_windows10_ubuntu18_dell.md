@@ -23,10 +23,13 @@ category: [ ubuntu, dell, windows10,bitlocker]
  
  <br>     
  
-   <p> Now shrink the disk </p>
-    <li>  In Control panel, search disk and go to “create and format hard disk partitions </li>  
-    <li> Right click the drive you want to shrink, and press shrink volume </li>   
-    <li> Assign at least 40gb to the free space. </li>
+
+   <p> Now shrink the dis</p>
+
+<li> In Control panel, search disk and go to “create and format hard disk partitions </li>
+<li>  Right click the drive you want to shrink, and press shrink volume</li>
+<li>   Assign at least 40gb to the free space.</li>
+
 
 <br>     
 
