@@ -12,6 +12,7 @@ category: [ ubuntu, dell, windows10,bitlocker]
     </p>
      
      <br>     
+     
 <h3> Partitioning windows </h3>
 
    <p> If you have bitlocker you need to save or print out your bitlocker key, this is very important, you will probably need to enter this at least once  </p>
