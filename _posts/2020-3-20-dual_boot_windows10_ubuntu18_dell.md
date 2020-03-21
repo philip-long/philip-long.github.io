@@ -11,21 +11,25 @@ category: [ ubuntu, dell, windows10,bitlocker]
     Steps to install ubuntu alongside windows 10. Dual booting seems to be becoming more and more difficult. It goes without saying, you should backup everything before trying this because things can go wrong (very wrong)!  
     </p>
      
+     <br>     
 <h3> Partitioning windows </h3>
 
-    <li> Save or print out your bitlocker key, this is very important, you will probably need to enter this at least once </li>
+   <p> If you have bitlocker you need to save or print out your bitlocker key, this is very important, you will probably need to enter this at least once  </p>
    
-   1. Manage bitlocker
+    <li>. Manage bitlocker </li>
    
-   2. Backup your recovery key   
+    <li> Backup your recovery key </li>  
    
-   3. Print the recovery key , Save to a USB flash drive
-   
-   4.  In Control panel, search disk and go to “create and format hard disk partitions"
-   
-   5. Right click the drive you want to shrink, and press shrink volume
-   
-   6. Assign at least 40gb to the free space.
+    <li> Print the recovery key , Save to a USB flash drive </li>
+ 
+ <br>     
+ 
+   <p> Now shrink the disk </p>
+    <li>  In Control panel, search disk and go to “create and format hard disk partitions </li>  
+    <li> Right click the drive you want to shrink, and press shrink volume </li>   
+    <li> Assign at least 40gb to the free space. </li>
+
+<br>     
 
 <h3> Disable Secure boot </h3>
 
@@ -36,8 +40,9 @@ category: [ ubuntu, dell, windows10,bitlocker]
  <li> UEFI Firmware Settings </li>
  <li> Click restart. </li>
  <li> Move to boot tab in bios </li>
- <li> Disable secure boot and confirm setting, you may be asked for bitlocker key </li>
-     
+ <li> Disable secure boot and confirm setting ( you may be asked for bitlocker key) </li>
+    
+    <br>     
     
 <h3> Switching from RAID to AHCI </h3>
  <li> Run MSCONFIG </li>
@@ -47,15 +52,18 @@ category: [ ubuntu, dell, windows10,bitlocker]
  <li>  Run MSCONFIG and disable Safe Boot. </li>
  <li>  Reboot </li>
 
+<br>     
 
 <h3> Installing Ubuntu </h3>
-I followed this [link](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/) for the partitioning, except,
+
+   <p> I followed this [link](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/) for the partitioning, except,</p>
+   
 <li> All partitions were set to logical rather than primary</li>
 <li> Swap size set to 3GB</li>
 
 <h3> After installation </h3>
   <li> So when you boot into back into windows, it will ask you for the bitlocker key </li>
-  <li> Enter it and all will be well</li>
+  <li> Enter it and <b> all will be well </b> </li>
   
  <h3> What happens when all is not well </h3>
 
