@@ -65,7 +65,7 @@ category: [ ubuntu, dell, windows10,bitlocker]
 
 <h3> After installation </h3>
   <li> So when you boot into back into windows, it will ask you for the bitlocker key </li>
-  <li> Enter it and <b> all will be well </b> </li>
+  <li> Enter it and <b> all will be well... </b> </li>
   
  <h3> What happens when all is not well </h3>
 
