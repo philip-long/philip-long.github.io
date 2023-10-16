@@ -10,7 +10,27 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
 
+			<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_three_columns-->
+<style>
+* {
+  box-sizing: border-box;
+}
 
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
 
 	{% if jekyll.environment == 'production' %}
 	{% include analytics.html %}
